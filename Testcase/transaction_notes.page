@@ -1,0 +1,13 @@
+Feature: Flip - Transaction Notes fitur
+
+  @flig @transaction-notes @transaction-notes-unverified-account
+  Scenario: User with case not verified account then trying to use transaction notes fitur
+    Background: Given user login with not verified account
+
+    When user is on homepage
+    And verification modal will be shown
+    When user click on "nanti saja" button
+    Then user is on homepage 
+    And user click on "catatan transaksi" link
+    Then user is on "catatan transaksi" page
+    
